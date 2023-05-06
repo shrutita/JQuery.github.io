@@ -1,0 +1,293 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Code</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="JQuerycdn.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="homestyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        #form {
+
+            border: 2px solid blue;
+            background-color: white;
+        }
+
+        body {
+            background-color: #0c0597;
+
+            font-size: 18px;
+        }
+
+        #p1 {
+            background-color: #0d0778;
+        }
+
+        span {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+
+    <div class="container-fluid">
+        <ul class="nav">
+            <li class="nav-item"><a href="JQueryproject.html" class="nav-link"><i class="fa fa-home"
+                        style="float:left;margin-right:5px;margin-top:3px"></i>Home</a></li>
+            <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+            <li class="nav-item"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Functions</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="function.html" class="nav-link text-light">Hide/Show</a></li>
+                    <li class="dropdown-item"><a href="inputfunction.html" class="nav-link text-light">text()</a></li>
+
+                </ul>
+            </li>
+            <li class="nav-item"><a href="calculator.html" class="nav-link">Calculator</a></li>
+            <li class="nav-item"><a href="validation.html" class="nav-link">Validation</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4" id="p1"><br>
+                <p>
+                    You can validate Email using jQuery by using the regex pattern.<br> Regex expression is used for
+                    search operations and they are special strings representing a pattern to be matched.
+                </p>
+            </div>
+            <div class="col-md-4" id="p1"><br>
+                <p>
+                    A valid password has following criteria for evaluation: (to determine % of length contribution)<br>
+
+                    Atleast an uppercase letter (10%), lowercase letter (10%), number (10%), special symbol(10%)<br>
+                    The word length criteria:<br>
+                    6 words : 20%<br>
+                    8 words : 40%<br>
+                    [10, infinity) words : 60%<br>
+                </p>
+            </div>
+            <div class="col-md-4" id="p1"><br>
+                <p>
+                    Mobile Number validation criteria:<br>
+
+                    The first digit should contain numbers between 6 to 9.<br>
+                    The rest 9 digit can contain any number between 0 to 9.<br>
+                    The mobile number can have 11 digits also by including 0 at the starting.<br>
+                    The mobile number can be of 12 digits also by including 91 at the starting<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 content-box"
+                style="background-color:white;color:black;margin-bottom:0px;position:relative;right:30px">
+                <br>
+                <div>
+                    <h3 class="title">Form validation using jQuery</h3>
+                </div><br><br>
+                <ul>
+                    <marquee class="marquee" direction="up" scrolldelay="100" onmouseover="this.stop();"
+                        onmouseout="this.start()">
+                        <li>Form validation is a process of confirming the relevant information entered by the user in
+                            the input field. </li>
+                        <li>
+                            Here we will be validating a simple form that consists of a username, password and a
+                            confirmed password using jQuery.
+                        </li>
+                        <li>Prerequisites: You must be aware of the basics of HTML, CSS, JavaScript, and jQuery.</li>
+
+
+                    </marquee>
+                </ul>
+
+            </div>
+            <div class="col-md-4" id="form">
+                <br>
+
+                <form>
+                    <tr>
+                        <span>Email :</span>
+
+                        <br><br>
+                        <input type="email" id="email">
+                        <p id="emailtext"></p>
+
+                        <span> Password :</span>
+                        <br><br>
+                        <input type="password" id="pass">
+                        <i class="bi bi-eye" id="btn1" style="position:relative;right:50px"></i>
+                        <p id="passtext"></p>
+
+                        <span> Mobile No :</span>
+                        <br><br>
+
+                        <input type="tel" id="mob">
+                        <p id="mobno"></p>
+
+                    </tr>
+                    <br>
+                    <button class="btn btn-success" style="margin-left:130px">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-4 content-box"
+                style="background-color:white;color:black;margin-bottom:0px;position:relative;left:30px">
+
+                <div>
+                    <h3 class="title">Approach:</h3>
+                </div><br><br>
+                <ul>
+                    <marquee class="marquee" direction="up" scrolldelay="100" onmouseover="this.stop();"
+                        onmouseout="this.start()">
+                        <li>First, you need to create an index.html file consisting of an HTML form with
+                            email, password, and confirm password as input fields. We will use Bootstrap 4 to use
+                            Bootstrap’s form controls. At the bottom of the
+
+                            <body> tag, include the “app.js” file having jQuery code for form validation.
+                        </li>
+
+                        <li>In the app.js file, when the document is ready, hide all the error messages. Perform the
+                            validation task for all the input fields such as username, email, password, and confirm
+                            password.</li>
+
+
+                    </marquee>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row mx-auto">
+                <div class="col-md-4" id="div3">
+                    <img src="5.jpg" width="300">
+                </div>
+                <div class="col-md-4" id="div4">
+                    <img src="6.png" width="300">
+                </div>
+                <div class="col-md-4">
+
+                    <a href="https://www.linkedin.com/in/shruti-tagade-4a6668253" target="blank"
+                        style="text-decoration:none;color:white"><i class="fa fa-linkedin-square" aria-hidden="true"
+                            style="float:left;margin-right:10px;margin-top:4px"></i>
+                        <li>Linkedin</li>
+                    </a>
+
+                    <a href="https://instagram.com/tagadeshruti?igshid=zDdkNTZiNTM=" target="blank"
+                        style="text-decoration:none;color:white"><i class="fa fa-instagram" aria-hidden="true"
+                            style="float:left;margin-right:10px;margin-top:4px"></i>
+                        <li>Instagram</li>
+                    </a>
+                    <a href="#" target="blank" style="text-decoration:none;color:white"><i class="fa fa-github"
+                            aria-hidden="true" style="float:left;margin-right:10px;margin-top:4px"></i>
+                        <li>GitHub</li>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#email').keyup(function () {
+
+                    if (checkEmail()) {
+                        $('#email').css({ 'border': '2px solid green', 'outline': 'none' });
+                        $('#emailtext').html('<font color="green">Email is valid</font>');
+                    }
+                    else {
+                        $('#email').css({ 'border': '2px solid red', 'outline': 'none' });
+                        $('#emailtext').html('<font color="red">Email is Invalid</font>');
+                    }
+                })
+
+                $('#pass').keyup(function () {
+
+                    if (checkPassword()) {
+                        $('#pass').css({ 'border': '2px solid green', 'outline': 'none' });
+                        $('#passtext').html('<font color="green">Password is valid</font>');
+                    }
+                    else {
+                        $('#pass').css({ 'border': '2px solid red', 'outline': 'none' });
+                        $('#passtext').html('<font color="red">Password is Invalid</font>');
+                    }
+                })
+
+                $('#mob').keyup(function () {
+
+                    if (checkMobno()) {
+                        $('#mob').css({ 'border': '2px solid green', 'outline': 'none' });
+                        $('#mobno').html('<font color="green">Number is valid</font>');
+                    }
+                    else {
+                        $('#mob').css({ 'border': '2px solid red', 'outline': 'none' });
+                        $('#mobno').html('<font color="red">Number is Invalid</font>');
+                    }
+                })
+
+                $('#btn1').on('click', function (e) {
+                    e.preventDefault();
+                    var passInput = $("#pass");
+                    if (passInput.attr('type') === 'password') {
+                        passInput.attr('type', 'text');
+                        $('i').attr('class', 'bi bi-eye');
+                    } else {
+                        passInput.attr('type', 'password');
+                        $('i').attr('class', 'bi bi-eye-slash');
+                    }
+                })
+
+            })
+            function checkMobno() {
+                let mobileno = $('#mob').val();
+                let mobileexp = /^(0|91)?[6-9][0-9]{9}$/;
+                if (mobileexp.test(mobileno)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            function checkPassword() {
+                let pass = $('#pass').val();
+                let passexp = /^.*(?=.{6,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&]).*$/;
+                if (passexp.test(pass)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            function checkEmail() {
+                let email = $('#email').val();
+                let emailexp = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+                if (emailexp.test(email)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+
+            }
+        </script>
+</body>
+
+</html>
